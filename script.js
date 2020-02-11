@@ -11,7 +11,7 @@
                 dateTo: '19/01',
                 endDate: '119',
                 image: 'capricorn.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'aquarius',
@@ -19,7 +19,7 @@
                 dateTo: '18/02',
                 endDate: '218',
                 image: 'aquarius.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'pisces',
@@ -27,7 +27,7 @@
                 dateTo: '20/03',
                 endDate: '320',
                 image: 'pisces.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'aries',
@@ -35,7 +35,7 @@
                 dateTo: '19/04',
                 endDate: '419',
                 image: 'aries.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'taurus',
@@ -43,7 +43,7 @@
                 dateTo: '20/05',
                 endDate: '520',
                 image: 'taurus.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'gemini',
@@ -51,7 +51,7 @@
                 dateTo: '20/06',
                 endDate: '620',
                 image: 'gemini.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'cancer',
@@ -59,7 +59,7 @@
                 dateTo: '22/07',
                 endDate: '722',
                 image: 'cancer.png', 
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'leo',
@@ -67,7 +67,7 @@
                 dateTo: '22/08',
                 endDate: '822',
                 image: 'leo.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'virgo',
@@ -75,7 +75,7 @@
                 dateTo: '22/09',
                 endDate: '922',
                 image: 'virgo.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'libra',
@@ -83,7 +83,7 @@
                 dateTo: '22/10',
                 endDate: '1022',
                 image: 'libra.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'scorpio',
@@ -91,7 +91,7 @@
                 dateTo: '21/11',
                 endDate: '1122',
                 image: 'scorpio.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'sagittarius',
@@ -99,7 +99,7 @@
                 dateTo: '21/12',
                 endDate: '1221',
                 image: 'sagittarius.png',
-                descript: '',
+                descript: 'something',
             },
             {
                 name: 'capricorn',
@@ -107,7 +107,7 @@
                 dateTo: '19/01',
                 endDate: '1231',
                 image: 'capricorn.png',
-                descript: '',
+                descript: 'something',
             }
         ];
 
@@ -115,12 +115,9 @@
         ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 
-    catstrology.events = function(){
+    // display object name, img and description 
 
-        // Bind event listener to form submission event 
-
-        $('form').on('submit', function(e){
-            e.preventDefault();
+    catstrology.displayResults = function(){    
 
         // capture user inputs in variables
 
@@ -129,26 +126,46 @@
         const userInputMonth = $('#monthEntry').val();
 
         // convert userInputMonth to number 
-
         if ($.inArray(userInputMonth, catstrology.months) !== -1);{
             const monthNum = (catstrology.months.indexOf(userInputMonth)+1);      
             
             // concat month and day inputs into a string 
-
             const userInput = monthNum+userInputDay;
 
-            // compare userInput to signs array 
+    // compare userInput to signs array
+        const result = catstrology.signs.find(sign => sign.endDate >= userInput);
+        console.log(result);
 
-            const result = catstrology.signs.find(sign => sign.endDate >= userInput);
+        const signInfo = Object.values(result);
+        const htmlToAppend = `
+        <div class="imgCont">
+        <img src="${signInfo[4]}" alt="astrology sign symbol">
+        </div>
+        <div class="signTextbox"></div>
+            <h4>${signInfo[0]}</h4>
+            <p>${signInfo[5]}</p>
+        `;
+        $('.resultsFlex').html(htmlToAppend);
 
-                // console.log(result);
-            }
-
-        })
+        }
     };
 
-// display object name, img and description 
 
+
+    catstrology.events = function(){
+
+        // Bind event listener to form submission 
+
+        $('form').on('submit', function(e){
+            e.preventDefault();
+
+            catstrology.displayResults();
+
+        })
+
+        $('.resultsFlex').empty();
+
+    };
 
     catstrology.init = function(){
 
@@ -156,9 +173,8 @@
 
     };
 
+// document ready 
     $(function() {
         catstrology.init();
 
 });
-
-
