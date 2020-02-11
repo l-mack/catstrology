@@ -11,7 +11,9 @@
                 dateTo: '19/01',
                 endDate: '119',
                 image: 'capricorn.png',
+                imageCat: 'capricornCat.png',
                 descript: 'something',
+                attribution: 'Capricorn Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'aquarius',
@@ -19,7 +21,9 @@
                 dateTo: '18/02',
                 endDate: '218',
                 image: 'aquarius.png',
+                imageCat: 'aquariusCat.png',
                 descript: 'something',
+                attribution: 'Aquarius Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'pisces',
@@ -27,7 +31,9 @@
                 dateTo: '20/03',
                 endDate: '320',
                 image: 'pisces.png',
+                imageCat: 'piscesCat.png',
                 descript: 'something',
+                attribution: 'Pisces Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'aries',
@@ -35,7 +41,9 @@
                 dateTo: '19/04',
                 endDate: '419',
                 image: 'aries.png',
+                imageCat: 'ariesCat.png',
                 descript: 'something',
+                attribution: 'Aries Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'taurus',
@@ -43,7 +51,9 @@
                 dateTo: '20/05',
                 endDate: '520',
                 image: 'taurus.png',
+                imageCat: 'taurusCat.png',
                 descript: 'something',
+                attribution: 'Taurus Cat by Denis Sazhin from the Noun Project'
             },
             {
                 name: 'gemini',
@@ -51,7 +61,9 @@
                 dateTo: '20/06',
                 endDate: '620',
                 image: 'gemini.png',
+                imageCat: 'geminiCat.png',
                 descript: 'something',
+                attribution: 'Gemini Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'cancer',
@@ -59,7 +71,10 @@
                 dateTo: '22/07',
                 endDate: '722',
                 image: 'cancer.png', 
+                imageCat: 'cancerCat.png',
                 descript: 'something',
+                attribution: 'Cancer Cat by Denis Sazhin from the Noun Project',
+
             },
             {
                 name: 'leo',
@@ -67,7 +82,9 @@
                 dateTo: '22/08',
                 endDate: '822',
                 image: 'leo.png',
+                imageCat: 'leoCat.png',
                 descript: 'something',
+                attribution: 'Leo Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'virgo',
@@ -75,7 +92,9 @@
                 dateTo: '22/09',
                 endDate: '922',
                 image: 'virgo.png',
+                imageCat: 'virgoCat.png',
                 descript: 'something',
+                attribution: 'Virgo Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'libra',
@@ -83,7 +102,9 @@
                 dateTo: '22/10',
                 endDate: '1022',
                 image: 'libra.png',
+                imageCat: 'libraCat.png',
                 descript: 'something',
+                attribution: 'Libra Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'scorpio',
@@ -91,7 +112,9 @@
                 dateTo: '21/11',
                 endDate: '1122',
                 image: 'scorpio.png',
+                imageCat: 'scorpioCat.png',
                 descript: 'something',
+                attribution: 'Scorpio Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'sagittarius',
@@ -99,7 +122,9 @@
                 dateTo: '21/12',
                 endDate: '1221',
                 image: 'sagittarius.png',
+                imageCat: 'sagittariusCat.png',
                 descript: 'something',
+                attribution: 'Sagittarius Cat by Denis Sazhin from the Noun Project',
             },
             {
                 name: 'capricorn',
@@ -107,7 +132,9 @@
                 dateTo: '19/01',
                 endDate: '1231',
                 image: 'capricorn.png',
+                imageCat: 'capricornCat.png',
                 descript: 'something',
+                attribution: 'Capricorn Cat by Denis Sazhin from the Noun Project',
             }
         ];
 
