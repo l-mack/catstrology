@@ -1,0 +1,133 @@
+
+/* stripping styles */
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.wrapper{
+    width: 70%; 
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* base styling */
+
+img{
+  width: 100%;
+  display: block;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 25% 70% 5%;
+    height: 100vh;
+}
+
+// header styles
+
+h1{
+    @include primaryFont();
+    @include fontSize(50);
+}
+
+h2{
+    @include secondaryFont();
+    @include fontSize(18);
+}
+
+h3{
+    @include primaryFont();
+    @include fontSize(18);
+    padding: 3% 0;
+}
+
+header{
+    @include centerFlex();
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+fieldset{
+    @include centerFlex;
+    flex-direction: column;
+    @include primaryFont();
+    border: 2px dashed $primaryGrey;
+    padding: 2%;
+    margin-bottom: 2%;
+    label,
+    select{
+        @include fontSize(15);
+    }
+}
+
+    input[type=submit]{
+        border: none;
+        padding: 10px 15px;
+        margin-left: 2%;
+        @include primaryFont();
+        text-transform: uppercase;
+        background: $accent;
+        @include fontSize(15);
+        cursor: pointer;
+      }
+
+
+.resultsFlex{
+    @include centerFlex;
+    .signTextbox{
+        @include centerFlex();
+        flex-direction: column;
+        width: 100%;
+        visibility: hidden;
+    }
+    h4{
+        @include primaryFont();
+        @include fontSize(18);
+        background: $primaryBlack;
+        color: $accent;
+        padding: 10px 40px;
+        margin-top: 5%;
+        text-align: center;
+    }
+    p{
+        @include secondaryFont();
+        @include fontSize(14);
+        padding: 5%;
+    }
+    .imgCont{
+        width: 55%;
+    }
+}
+
+footer{
+    background: $primaryBlack;
+    @include centerFlex;
+    p,
+    a{
+        color: white;
+        @include fontSize(10);
+        font-family: $secondaryFont;
+        text-align: center;
+    }
+}

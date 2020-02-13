@@ -1,0 +1,45 @@
+// *****************variables*****************
+
+// font
+$primaryFont: 'Roboto Slab', serif, cursive;
+$secondaryFont: 'Roboto Mono', monospace, sans-serif;
+
+$letterSpacing: 1px;
+
+// colour
+$accent: #05ffa1;
+$primaryColor: #a95aec;
+$secondaryColor: #01cdfe;
+$primaryGrey: #aaaaaa;
+$primaryBlack: #000000;
+
+
+
+
+// *****************mixins*****************
+
+// font
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+@mixin primaryFont(){
+	font-family: $primaryFont;
+	  text-transform: uppercase;
+	  letter-spacing: 5px;
+	  
+}
+
+@mixin secondaryFont(){
+	font-family: $secondaryFont;
+	letter-spacing: $letterSpacing;
+}
+
+// alignment and centering
+
+@mixin centerFlex(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

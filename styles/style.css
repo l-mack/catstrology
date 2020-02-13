@@ -234,3 +234,208 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* stripping styles */
+body,
+a,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.wrapper {
+  width: 70%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* base styling */
+img {
+  width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25% 70% 5%;
+      grid-template-rows: 25% 70% 5%;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 3% 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5%;
+}
+
+fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border: 2px dashed #aaaaaa;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+fieldset label,
+fieldset select {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+input[type=submit] {
+  border: none;
+  padding: 10px 15px;
+  margin-left: 2%;
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: #05ffa1;
+  font-size: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.resultsFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resultsFlex .signTextbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.resultsFlex h4 {
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  background: #000000;
+  color: #05ffa1;
+  padding: 10px 40px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.resultsFlex p {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 5%;
+}
+
+.resultsFlex .imgCont {
+  width: 55%;
+}
+
+footer {
+  background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p,
+footer a {
+  color: white;
+  font-size: 10px;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace, sans-serif;
+  text-align: center;
+}
