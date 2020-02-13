@@ -1,0 +1,45 @@
+@media(max-width: 800px){
+    .wrapper{
+        width: 85%;
+    }
+}
+
+@media(max-width: 600px){
+    .resultsFlex{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px){
+    .wrapper{
+        width: 90%;
+    }
+    h1{
+        @include fontSize(45);
+    }
+    .inputFlex{
+        flex-direction: column;
+    }
+    input[type=submit]{
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 420px){
+    h1{
+        @include fontSize(40);
+    }
+}
+
+@media (max-width: 370px){
+    h1{
+        @include fontSize(30);
+    }
+    h2{
+        text-align: center;
+    }
+    fieldset .selectFlex{
+        flex-direction: column;
+    }
+
+}
