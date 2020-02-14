@@ -384,7 +384,8 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover,
+input[type=submit]:focus {
   background: #a95aec;
 }
 
@@ -470,6 +471,82 @@ footer a {
   font-size: 1rem;
   font-family: "Roboto Mono", monospace, sans-serif;
   text-align: center;
+}
+
+.displayAll {
+  border: none;
+  padding: 10px 15px;
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: #000000;
+  color: #05ffa1;
+  font-size: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.displayAll:hover,
+.displayAll:focus {
+  background: #a95aec;
+}
+
+.displayAllGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 2%;
+}
+
+.displayAllGrid .displayAllFlex {
+  margin: 2%;
+}
+
+.displayAllGrid .displayAllFlex .imgCont {
+  height: 130px;
+}
+
+.displayAllGrid h4 {
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #05ffa1;
+  padding: 10px 30px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.displayAllGrid p {
+  font-family: "Roboto Mono", monospace, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 5%;
+  border-top: 2px dashed #aaaaaa;
+}
+
+.displayAllGrid .imgCont {
+  width: 70%;
+}
+
+.nextBtn {
+  border: none;
+  padding: 10px 15px;
+  margin-left: 85%;
+  font-family: "Roboto Slab", serif, cursive;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: #05ffa1;
+  font-size: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {

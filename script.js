@@ -22,7 +22,7 @@
                 endDate: '218',
                 image: 'aquarius.png',
                 imageCat: 'aquariusCat.png',
-                descript: 'Aquarian cats can’t be normal.  Even for cats, these creatures are weird.  They probably have you face-palming on the regular, saying “did you really just eat that” or “are you really sleeping like that?” Redefining what it means to be “quirky” Aquarian felines are always full of surprises. Keep their active minds busy with lots of games and play time. Teach them to fetch, if any cat is likely to pick it up, it’s an aqua-kitty.',
+                descript: 'Aquarian cats can’t be normal.  Even for cats, these creatures are weird.  They probably have you face-palming on the regular, saying things like, “did you really just eat that?!" Redefining what it means to be “quirky” Aquarian felines are full of surprises. Teach them to fetch, if any cat is likely to pick it up, it’s an aqua-kitty.',
                 attribution: 'Aquarius Cat by Denis Sazhin from the Noun Project',
             },
             {
@@ -152,8 +152,8 @@
 
     // compare userInput to signs array
         const result = catstrology.signs.find(sign => sign.endDate >= userInput);
-        // console.log(result);
 
+        // append results 
         const signInfo = Object.values(result);
         const htmlToAppend = `
         <div class="imgCont">
@@ -168,18 +168,62 @@
 
         };
 
+        // display all feature 
+        catstrology.displayAllFeatures = function(){
+            const resultFirst4 = catstrology.signs.filter(sign => sign.endDate <= 419);
+            resultFirst4.forEach(function (sign){
+                const htmlToAppend =`
+                    <div class = "displayAllFlex">
+                        <div class="imgCont">
+                        <img src="./assets/signsCats/${sign.imageCat}" alt="${sign.name} cat cartoon">
+                        </div>
+                        <div class="signTextbox">
+                            <h4>${sign.name}</h4>
+                            <p>${sign.descript}</p>
+                        </div>
+                    </div>
+                    `;
+                const nextBtn = `
+                    <button class="displayAllFeat nextBtn">next</button>
+                    `;
+            $('.displayAllGrid').append(htmlToAppend);
+        });
+        //  $('.displayAllNext').append(nextBtn);
+    };
 
+    // events 
     catstrology.events = function(){
 
-        // Bind event listener to form submission 
-
+        // form submission 
         $('form').on('submit', function(e){
             e.preventDefault();
-            $('.resultsFlex').fadeIn();
-
             catstrology.displayResults();
-
         })
+
+        // display all 
+        $('.displayAll').on('click', function (){
+            
+            let e = $(this);
+            if (e.text() == e.data('text-swap')){
+                e.text(e.data('text-original'));
+                $('body').removeClass('displayAllFeat');
+                $('.displayAllGrid').hide();
+                $('.displayAllGrid').empty();
+                $('main').show();
+                $('header').show();
+    
+            }else{
+                e.data('text-original', e.text());
+                e.text(e.data('text-swap'));
+                $('body').addClass('displayAllFeat');
+                catstrology.displayAllFeatures()
+                $('.displayAllGrid').show();
+                $('main').hide();
+                $('header').hide();
+    
+            }
+
+        });
     };
 
     catstrology.init = function(){
