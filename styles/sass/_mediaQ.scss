@@ -1,14 +1,8 @@
-@media(max-width: 1050px){
-    .resultsFlex{
-        .placeHolderImg{
-            width: 40%;
-        }
-    }
-}
+// media queries 
 
 @media(max-width: 800px){
     .wrapper{
-        width: 85%;
+        width: 90%;
     }
     .resultsFlex{
         .placeHolderImg{
@@ -23,23 +17,30 @@
             width: 50%;
         }
     }
+    .displayAllGrid{
+        grid-template-columns: 50% 50%;
+        h4{
+            padding-left: 0;
+        }
+    }
 }
 
 @media(max-width: 600px){
     .resultsFlex{
         flex-direction: column;
     }
-    .resultsFlex{
-        .placeHolderImg{
-            width: 60%;
+    .displayAllGrid{
+        grid-template-columns: 100%;
+        .displayAllFlex{
+            .imgCont{
+                margin-left: 10%;
+            }
         }
     }
 }
 
 @media(max-width: 500px){
-    .wrapper{
-        width: 90%;
-    }
+    
     h1{
         @include fontSize(45);
     }
@@ -49,43 +50,25 @@
     input[type=submit]{
         margin-top: 3%;
     }
-    .resultsFlex{
-        .placeHolderImg{
-            width: 60%;
-        }
-    }
+    
 }
 
 @media (max-width: 420px){
     h1{
         @include fontSize(40);
     }
-    .resultsFlex{
-        .placeHolderImg{
-            width: 70%;
-            margin-top: 5%;
-        }
-    }
 }
 
 @media (max-width: 370px){
     h1{
-        @include fontSize(30);
+        @include fontSize(25);
     }
     h2{
         text-align: center;
+        @include fontSize(15);
     }
     fieldset .selectFlex{
         flex-direction: column;
     }
 
-}
-
-@media (max-width: 330px){
-    h1{
-        @include fontSize(25);
-    }
-    h2{
-        @include fontSize(15);
-    }
 }

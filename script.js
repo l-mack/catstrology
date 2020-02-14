@@ -170,8 +170,8 @@
 
         // display all feature 
         catstrology.displayAllFeatures = function(){
-            const resultFirst4 = catstrology.signs.filter(sign => sign.endDate <= 419);
-            resultFirst4.forEach(function (sign){
+            const resultDisplayAll = catstrology.signs.filter(sign => sign.endDate <= 1221);
+            resultDisplayAll.forEach(function (sign){
                 const htmlToAppend =`
                     <div class = "displayAllFlex">
                         <div class="imgCont">
@@ -183,12 +183,8 @@
                         </div>
                     </div>
                     `;
-                const nextBtn = `
-                    <button class="displayAllFeat nextBtn">next</button>
-                    `;
             $('.displayAllGrid').append(htmlToAppend);
         });
-        //  $('.displayAllNext').append(nextBtn);
     };
 
     // events 

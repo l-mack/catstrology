@@ -105,8 +105,7 @@ fieldset{
         cursor: pointer;
       }
 
-      input[type=submit]:hover,
-      input[type=submit]:focus{
+      input[type=submit]:hover{
           background: $primaryColor;
       }
 
@@ -137,7 +136,7 @@ fieldset{
     }
 }
     .imgCont{
-        width: 70%;
+        width: 50%;
     }
 }
 
@@ -166,21 +165,20 @@ footer{
     cursor: pointer;
   }
 
-  .displayAll:hover,
-  .displayAll:focus{
+  .displayAll:hover{
       background: $primaryColor;
   }
 
 .displayAllGrid{
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
     margin-top: 2%;
 
     .displayAllFlex{
         margin: 2%;
-        .imgCont{
-            height: 130px;
+        h4{
+            text-align: center;
         }
     }
 

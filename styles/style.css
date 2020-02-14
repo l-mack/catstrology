@@ -386,8 +386,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover,
-input[type=submit]:focus {
+input[type=submit]:hover {
   background: #a95aec;
 }
 
@@ -447,7 +446,7 @@ input[type=submit]:focus {
 }
 
 .resultsFlex .imgCont {
-  width: 70%;
+  width: 50%;
 }
 
 footer {
@@ -486,8 +485,7 @@ footer a {
   cursor: pointer;
 }
 
-.displayAll:hover,
-.displayAll:focus {
+.displayAll:hover {
   background: #a95aec;
 }
 
@@ -496,8 +494,8 @@ footer a {
   display: grid;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
   margin-top: 2%;
 }
 
@@ -505,8 +503,8 @@ footer a {
   margin: 2%;
 }
 
-.displayAllGrid .displayAllFlex .imgCont {
-  height: 130px;
+.displayAllGrid .displayAllFlex h4 {
+  text-align: center;
 }
 
 .displayAllGrid h4 {
@@ -548,15 +546,9 @@ footer a {
   cursor: pointer;
 }
 
-@media (max-width: 1050px) {
-  .resultsFlex .placeHolderImg {
-    width: 40%;
-  }
-}
-
 @media (max-width: 800px) {
   .wrapper {
-    width: 85%;
+    width: 90%;
   }
   .resultsFlex .placeHolderImg {
     width: 45%;
@@ -567,6 +559,13 @@ footer a {
   .resultsFlex .placeHolderImg {
     width: 50%;
   }
+  .displayAllGrid {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .displayAllGrid h4 {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -576,15 +575,16 @@ footer a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .resultsFlex .placeHolderImg {
-    width: 60%;
+  .displayAllGrid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .displayAllGrid .displayAllFlex .imgCont {
+    margin-left: 10%;
   }
 }
 
 @media (max-width: 500px) {
-  .wrapper {
-    width: 90%;
-  }
   h1 {
     font-size: 45px;
     font-size: 4.5rem;
@@ -598,9 +598,6 @@ footer a {
   input[type=submit] {
     margin-top: 3%;
   }
-  .resultsFlex .placeHolderImg {
-    width: 60%;
-  }
 }
 
 @media (max-width: 420px) {
@@ -608,35 +605,22 @@ footer a {
     font-size: 40px;
     font-size: 4rem;
   }
-  .resultsFlex .placeHolderImg {
-    width: 70%;
-    margin-top: 5%;
-  }
 }
 
 @media (max-width: 370px) {
   h1 {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 25px;
+    font-size: 2.5rem;
   }
   h2 {
     text-align: center;
+    font-size: 15px;
+    font-size: 1.5rem;
   }
   fieldset .selectFlex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-
-@media (max-width: 330px) {
-  h1 {
-    font-size: 25px;
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 15px;
-    font-size: 1.5rem;
   }
 }
