@@ -150,7 +150,7 @@
         // concat month and day inputs into a string 
         const userInput = parseInt(userInputMonth+userInputDay);
 
-    // compare userInput to signs array
+        // compare userInput to signs array
         const result = catstrology.signs.find(sign => sign.endDate >= userInput);
 
         // append results 
@@ -165,7 +165,6 @@
         </div>
         `;
         $('.resultsFlex').html(htmlToAppend);
-
         };
 
         // display all feature 
@@ -198,32 +197,28 @@
 
         // display all 
         $('.displayAll').on('click', function (){
-            
             let e = $(this);
             if (e.text() == e.data('text-swap')){
                 e.text(e.data('text-original'));
                 $('body').removeClass('displayAllFeat');
-                $('.displayAllGrid').hide();
+                $('.displayAllGrid').slideUp();
                 $('.displayAllGrid').empty();
-                $('main').show();
-                $('header').show();
-    
+                $('main').slideDown();
+                $('header').slideDown();
             }else{
                 e.data('text-original', e.text());
                 e.text(e.data('text-swap'));
                 $('body').addClass('displayAllFeat');
                 catstrology.displayAllFeatures()
-                $('.displayAllGrid').show();
-                $('main').hide();
-                $('header').hide();
-    
+                $('.displayAllGrid').slideDown();
+                $('main').slideUp();
+                $('header').slideUp();
             }
-
         });
     };
 
+    // init
     catstrology.init = function(){
-
         catstrology.events();    
 
     };

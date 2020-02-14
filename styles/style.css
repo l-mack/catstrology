@@ -282,8 +282,6 @@ body {
   grid-auto-columns: 100%;
   height: 100vh;
   min-height: 100%;
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 h1 {
@@ -384,6 +382,8 @@ input[type=submit] {
   font-size: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
 }
 
 input[type=submit]:hover {
@@ -483,6 +483,8 @@ footer a {
   font-size: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
 }
 
 .displayAll:hover {
@@ -530,20 +532,6 @@ footer a {
 
 .displayAllGrid .imgCont {
   width: 70%;
-}
-
-.nextBtn {
-  border: none;
-  padding: 10px 15px;
-  margin-left: 85%;
-  font-family: "Roboto Slab", serif, cursive;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  background: #05ffa1;
-  font-size: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
 }
 
 @media (max-width: 800px) {
