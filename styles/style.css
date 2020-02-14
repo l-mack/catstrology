@@ -282,6 +282,8 @@ body {
   grid-auto-columns: 100%;
   height: 100vh;
   min-height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 h1 {
@@ -403,10 +405,7 @@ input[type=submit]:focus {
 
 .resultsFlex .placeHolderImg {
   width: 30%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-filter: drop-shadow(8px 8px #a95aec) grayscale(60%);
-          filter: drop-shadow(8px 8px #a95aec) grayscale(60%);
+  margin-top: 2%;
 }
 
 .resultsFlex .signTextbox {
@@ -549,9 +548,24 @@ footer a {
   cursor: pointer;
 }
 
+@media (max-width: 1050px) {
+  .resultsFlex .placeHolderImg {
+    width: 40%;
+  }
+}
+
 @media (max-width: 800px) {
   .wrapper {
     width: 85%;
+  }
+  .resultsFlex .placeHolderImg {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .resultsFlex .placeHolderImg {
+    width: 50%;
   }
 }
 
@@ -561,6 +575,9 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .resultsFlex .placeHolderImg {
+    width: 60%;
   }
 }
 
@@ -581,12 +598,19 @@ footer a {
   input[type=submit] {
     margin-top: 3%;
   }
+  .resultsFlex .placeHolderImg {
+    width: 60%;
+  }
 }
 
 @media (max-width: 420px) {
   h1 {
     font-size: 40px;
     font-size: 4rem;
+  }
+  .resultsFlex .placeHolderImg {
+    width: 70%;
+    margin-top: 5%;
   }
 }
 
@@ -603,5 +627,16 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 330px) {
+  h1 {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 15px;
+    font-size: 1.5rem;
   }
 }
